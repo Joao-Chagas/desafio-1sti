@@ -9,13 +9,23 @@
     "target": "es2017",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@interface/*": ["@interface/*"],
+      "@database/*": ["database/*"],
+      "@graphql/*": ["graphql/*"],
+      "@api/*": ["api/*"],
+      "@domain/*": ["domain/*"],
+      "@persistence/*": ["persistence/*"],
+      "@mappers/*": ["utils/mappers/*"],
+      "@services/*": ["utils/services/*"],
+    }
   }
 }
