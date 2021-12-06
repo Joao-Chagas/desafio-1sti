@@ -19,6 +19,6 @@ export class AddressDomain {
             throw new BadRequestException(`The zip-code is incorrect or doesn't exists`);
         }
         
-        return await this.addressMapper.update(this.addressApi);
+        return await this.addressMapper.update(address);
     }
 }
