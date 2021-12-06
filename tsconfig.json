@@ -18,7 +18,7 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@interface/*": ["@interface/*"],
+      "@interface/*": ["@types/interface/*"],
       "@database/*": ["database/*"],
       "@graphql/*": ["graphql/*"],
       "@api/*": ["api/*"],
