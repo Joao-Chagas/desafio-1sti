@@ -21,6 +21,7 @@
       "@interface/*": ["@types/interface/*"],
       "@database/*": ["database/*"],
       "@graphql/*": ["graphql/*"],
+      "@auth/*": ["auth/*"],
       "@api/*": ["api/*"],
       "@domain/*": ["domain/*"],
       "@persistence/*": ["persistence/*"],
