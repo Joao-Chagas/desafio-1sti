@@ -9,3 +9,14 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model user {
+  id          Int    @unique @default(autoincrement())
+  name        String @db.VarChar(50)
+  cellphone   String @db.VarChar(9)
+  cpf         String @unique @db.VarChar(11)
+  zipCode     String @db.VarChar(8)
+  publicPlace String @db.VarChar(30)
+  city        String @db.VarChar(20)
+  state       String @db.VarChar(20)
+}
