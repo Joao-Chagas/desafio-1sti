@@ -1,6 +1,5 @@
 import { AddressResponse } from "@api/address/dto/response/Address";
 import { BadRequestException, Inject, Injectable } from "@nestjs/common";
-import { IMapper } from "@interface/mapper/IMapper";
 import { AddressApi } from "@services/address/address-api";
 
 const AddressApiMapper = () => Inject('AddressMapper')
