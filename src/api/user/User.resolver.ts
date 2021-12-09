@@ -12,13 +12,6 @@ export class UserResolver {
   constructor(@User() private readonly userDomain: UserDomain) {}
 
   @Query((returns) => UserResponse, {
-    description: 'This query finds the user by cpf',
-  })
-  async findByCpf(@Args('cpf', { type: () => String }) cpf: string) {
-    return this.userDomain.findByCpf(cpf);
-  }
-
-  @Query((returns) => UserResponse, {
     description: 'This query finds all users',
     name: 'getUsers',
     nullable: true,
