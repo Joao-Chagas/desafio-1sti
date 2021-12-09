@@ -1,11 +1,9 @@
 import { Injectable } from "@nestjs/common";
-import { IMapper } from "@interface/mapper/IMapper";
 import { AddressResponse } from "@api/address/dto/response/Address";
-import { AddressType } from "@services/address/types/address.type";
 
 @Injectable()
 export class AddressMapper implements IMapper<AddressResponse> {
-    async update(data: AddressType): Promise<AddressResponse> {
+    async update(data: IAddress): Promise<AddressResponse> {
         return {
             zipCode: data.cep,
             publicPlace: data.logradouro,
