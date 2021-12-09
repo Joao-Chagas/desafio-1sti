@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  postgres:
+    container_name: database
+    restart: always
+    image: postgres:10
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: prisma
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}  
+    ports:
+      - 5432:5432
+    volumes:
+      - pg-data:/var/lib/postgres/data
+volumes:
+  pg-data:
